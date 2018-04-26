@@ -1,3 +1,5 @@
 bot_passport.json
 **/obj/*
 **/bin/*
+**/.vs/*
+**/.vscode/*
