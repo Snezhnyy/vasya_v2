@@ -37,16 +37,19 @@ namespace Telegram.Bot.vasya_v2
             var message = messageEventArgs.Message;
             if (message == null || message.Type != MessageType.TextMessage) return;
             DefaultResponse listener;
-            switch (message.Text)
+            if (message.Text.ToLower().Contains("вася"))
             {
-                default:
-                    listener = new DefaultResponse(messageEventArgs);
-                    break;     
-            }  
-            await Bot.SendTextMessageAsync(
-                        message.Chat.Id,
-                        listener.Reply(),
-                        replyMarkup: new ReplyKeyboardRemove());
+                switch (message.Text.ToLower())
+                {
+                    default:
+                        listener = new DefaultResponse(messageEventArgs);
+                        break;     
+                }  
+                await Bot.SendTextMessageAsync(
+                            message.Chat.Id,
+                            listener.Reply(),
+                            replyMarkup: new ReplyKeyboardRemove());
+            }
         }
 
         private static string ReadToken()
