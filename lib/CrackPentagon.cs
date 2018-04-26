@@ -12,17 +12,17 @@ using System.Collections.Generic;
 
 namespace Telegram.Bot.vasya_v2
 {
-    class DefaultResponse
+    class CrackPentagon : DefaultResponse
     {
-        protected MessageEventArgs message;
-        public DefaultResponse(MessageEventArgs message)
+        private MessageEventArgs message;
+
+        public CrackPentagon(MessageEventArgs message) : base(message)
         {
-            this.message = message;
         }
 
-        public virtual string Reply()
+        public override string Reply()
         {
-            return "Hello!";
+            return "Пентагон взломан!";
         }
     }
 }
