@@ -36,16 +36,16 @@ namespace Telegram.Bot.vasya_v2
         {
             var message = messageEventArgs.Message;
             if (message == null || message.Type != MessageType.TextMessage) return;
-            string answer = "";
+            DefaultResponse listener;
             switch (message.Text)
             {
                 default:
-                    answer = @"Looking good!";
+                    listener = new DefaultResponse(messageEventArgs);
                     break;     
             }  
             await Bot.SendTextMessageAsync(
                         message.Chat.Id,
-                        answer,
+                        listener.Reply(),
                         replyMarkup: new ReplyKeyboardRemove());
         }
 
