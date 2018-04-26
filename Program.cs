@@ -13,7 +13,7 @@ using Newtonsoft.Json;
 using System.Collections.Generic;
 
 
-namespace Telegram.Bot.vasya_bot
+namespace Telegram.Bot.vasya_v2
 {
     class Program
     {
@@ -23,9 +23,6 @@ namespace Telegram.Bot.vasya_bot
             Bot = new TelegramBotClient(ReadToken());
             var me = Bot.GetMeAsync().Result;
             Console.Title = me.Username;
-
-            Console.WriteLine(System.Reflection.Assembly.GetExecutingAssembly().Location);
-
             Bot.OnMessage += BotOnMessageReceived;
 
             Bot.StartReceiving(Array.Empty<UpdateType>());
