@@ -7,6 +7,7 @@ namespace Telegram.Bot.vasya_v2
     public class TTimeTable
     {
         public int Id { set; get; }
+        public int DialogId { set; get; }
         public string DayWeek { set; get; }
         public string NameSbj { set; get; }
         public int Order { set; get; }
