@@ -18,7 +18,7 @@ namespace Telegram.Bot.vasya_v2
  
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=vasya_v2;AttachDbFileName=C:\\Users\\Snowdrop\\vasya_v2.mdf;Integrated Security=true;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=vasya_v3;AttachDbFileName=C:\\Users\\Snowdrop\\vasya_v2.mdf;Integrated Security=true;Trusted_Connection=True;");
         }
     }
 }

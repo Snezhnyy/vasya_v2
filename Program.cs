@@ -33,8 +33,22 @@ namespace Telegram.Bot.vasya_v2
         }
 
         private static async void BotOnMessageReceived(object sender, MessageEventArgs messageEventArgs)
-        {
+        {            
             var message = messageEventArgs.Message;
+
+            Console.WriteLine($"Слушаю сообщение {message.Text} от пользователя {message.From.Id} в чате {message.Chat.Id}");
+
+            using (VasyaContext db = new VasyaContext())
+            {
+                var dialog = db.Dialogs.Select(p => p.TelegramId == message.Chat.Id).ToList();
+                if (dialog.Count == 0)
+                {
+                    db.Dialogs.Add(new TDialog {TelegramId = message.Chat.Id} );
+                    db.SaveChanges();
+                    Console.WriteLine($"New dialog added with ChatId = {message.Chat.Id}");
+                }
+            }
+            
             if (message == null || message.Type != MessageType.TextMessage) return;
             DefaultResponse listener;
             if (message.Text.ToLower().Contains("взлом") && message.Text.ToLower().Contains("пентагон"))
