@@ -11,6 +11,5 @@ namespace vasya_v2.lib.Models
         public string TmTb_NameSbj { set; get; }
         public int TmTb_Order { set; get; }
         public string TmTb_Cabinet { set; get; }
-        //лалалла
     }
 }
