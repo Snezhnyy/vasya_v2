@@ -38,36 +38,35 @@ namespace Telegram.Bot.vasya_v2
             if (message == null || message.Type != MessageType.TextMessage) return;
             DefaultResponse listener;
             if (message.Text.ToLower().Contains("взлом") && message.Text.ToLower().Contains("пентагон"))
-                {
-                    listener = new CrackPentagon(messageEventArgs);
-                }
-                else
-                if (message.Text.ToLower().Contains("иерусалим"))
-                {
-                    listener = new DeusVult(messageEventArgs);
-                }
-                else
-                 if (message.Text.ToLower().Contains("как") && message.Text.ToLower().Contains("настроение"))
-                {
-                    listener = new HappyBot(messageEventArgs);
-                }
-                else
-                    if (message.Text.ToLower().Contains("анекдот"))
-                {
-                    listener = new Humor(messageEventArgs);
-                }
-                else 
-                switch (message.Text.ToLower())
-                {
-                    default:
-                        listener = new DefaultResponse(messageEventArgs);
-                        break;     
-                }  
-                await Bot.SendTextMessageAsync(
+            {
+                listener = new CrackPentagon(messageEventArgs);
+            }
+            else
+            if (message.Text.ToLower().Contains("иерусалим"))
+            {
+                listener = new DeusVult(messageEventArgs);
+            }
+            else
+            if (message.Text.ToLower().Contains("как") && message.Text.ToLower().Contains("настроение"))
+            {
+                listener = new HappyBot(messageEventArgs);
+            }
+            else
+            if (message.Text.ToLower().Contains("анекдот"))
+            {
+                listener = new Humor(messageEventArgs);
+            }
+            else 
+            switch (message.Text.ToLower())
+            {
+                default:
+                    listener = new DefaultResponse(messageEventArgs);
+                    break;     
+            }  
+            await Bot.SendTextMessageAsync(
                             message.Chat.Id,
                             listener.Reply(),
                             replyMarkup: new ReplyKeyboardRemove());
-            }
         }
 
         private static string ReadToken()
