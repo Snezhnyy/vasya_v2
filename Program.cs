@@ -38,31 +38,29 @@ namespace Telegram.Bot.vasya_v2
             if (message == null || message.Type != MessageType.TextMessage) return;
             DefaultResponse listener;
             if (message.Text.ToLower().Contains("вася"))
-            {   
+            {
                 Console.WriteLine($"Слушаю сообщение {message.Text} от {message.From.Id} в беседе {message.Chat.Id}.");
                 if (message.Text.ToLower().Contains("взлом") && message.Text.ToLower().Contains("пентагон"))
                 {
                     listener = new CrackPentagon(messageEventArgs);
                 }
-                else 
+                else
                 if (message.Text.ToLower().Contains("иерусалим"))
-                 {
+                {
                     listener = new DeusVult(messageEventArgs);
-                 }
-<<<<<<< HEAD
+                }
                 else
                  if (message.Text.ToLower().Contains("как") && message.Text.ToLower().Contains("настроение"))
-                    {
+                {
                     listener = new HappyBot(messageEventArgs);
                 }
                 else
-
-
-                    switch (message.Text.ToLower())
-=======
-                else  
+                    if (message.Text.ToLower().Contains("анекдот"))
+                {
+                    listener = new Humor(messageEventArgs);
+                }
+                else 
                 switch (message.Text.ToLower())
->>>>>>> 4d335f4aed44a9c22bca3f46ea4f86b5d8d6b8b5
                 {
                     default:
                         listener = new DefaultResponse(messageEventArgs);
