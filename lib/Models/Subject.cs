@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace vasya_v2.lib.Models
+namespace Telegram.Bot.vasya_v2
 {
-    public class Subjects
+    public class Subject
     {
         public int Sbj_ID { get; set; }
         public string Sbj_Name { get; set; }

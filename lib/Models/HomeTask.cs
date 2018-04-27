@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace vasya_v2.lib.Models
+namespace Telegram.Bot.vasya_v2
 {
-    public class HomeTasks
+    public class HomeTask
     {
         public int HT_ID { get; set; }
         public DateTime HT_Date { get; set; }

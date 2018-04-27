@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace vasya_v2.lib.Models
+namespace Telegram.Bot.vasya_v2
 {
-    public class TimeTables
+    public class TimeTable
     {
         public int TmTb_ID { set; get; }
         public string TmTb_DayWeek { set; get; }
