@@ -16,7 +16,7 @@ namespace Telegram.Bot.vasya_v2
     {
 
         public CrackPentagon(MessageEventArgs message) : base(message)
-        {
+        {      
         }
 
         public override string Reply()
