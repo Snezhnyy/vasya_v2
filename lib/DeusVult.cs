@@ -15,7 +15,7 @@ namespace Telegram.Bot.vasya_v2
     class DeusVult : DefaultResponse
     {
 
-        public CrackPentagon(MessageEventArgs message) : base(message)
+        public DeusVult(MessageEventArgs message) : base(message)
         {
         }
 
