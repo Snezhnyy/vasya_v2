@@ -14,7 +14,6 @@ namespace Telegram.Bot.vasya_v2
 {
     class CrackPentagon : DefaultResponse
     {
-        private MessageEventArgs message;
 
         public CrackPentagon(MessageEventArgs message) : base(message)
         {
