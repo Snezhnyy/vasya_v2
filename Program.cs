@@ -43,7 +43,13 @@ namespace Telegram.Bot.vasya_v2
                 {
                     listener = new CrackPentagon(messageEventArgs);
                 }
+                else 
+                if (message.Text.ToLower().Contains("Иерусалим"))
+                 {
+                    listener = new DeusVult(messageEventArgs);
+                 }
                 else
+  
                 switch (message.Text.ToLower())
                 {
                     default:
