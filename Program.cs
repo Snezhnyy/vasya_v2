@@ -48,8 +48,7 @@ namespace Telegram.Bot.vasya_v2
                  {
                     listener = new DeusVult(messageEventArgs);
                  }
-                else
-  
+                else  
                 switch (message.Text.ToLower())
                 {
                     default:

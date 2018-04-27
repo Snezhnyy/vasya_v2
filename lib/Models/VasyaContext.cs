@@ -6,10 +6,10 @@ namespace Telegram.Bot.vasya_v2
 {
     public partial class VasyaContext : DbContext
     {
-        public DbSet<Dialog> Dialogs { get; set; }
-        public DbSet<HomeTask> HomeTasks { get; set; }
-        public DbSet<Subject> Subjects { get; set; }
-        public DbSet<TimeTable> TimeTables { get; set; }
+        public DbSet<vasya_v2.TDialog> Dialogs { get; set; }
+        public DbSet<vasya_v2.THomeTask> HomeTasks { get; set; }
+        public DbSet<vasya_v2.TSubject> Subjects { get; set; }
+        public DbSet<vasya_v2.TTimeTable> TimeTables { get; set; }
          
         public VasyaContext()
         {
