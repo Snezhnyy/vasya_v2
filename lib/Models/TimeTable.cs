@@ -4,12 +4,12 @@ using System.Text;
 
 namespace Telegram.Bot.vasya_v2
 {
-    public class TimeTable
+    public class TTimeTable
     {
-        public int TmTb_ID { set; get; }
-        public string TmTb_DayWeek { set; get; }
-        public string TmTb_NameSbj { set; get; }
-        public int TmTb_Order { set; get; }
-        public string TmTb_Cabinet { set; get; }
+        public int Id { set; get; }
+        public string DayWeek { set; get; }
+        public string NameSbj { set; get; }
+        public int Order { set; get; }
+        public string Cabinet { set; get; }
     }
 }

@@ -22,7 +22,7 @@ namespace Telegram.Bot.vasya_v2
 
         public virtual string Reply()
         {
-            return "Hello!";
+            return "Привет!";
         }
     }
 }

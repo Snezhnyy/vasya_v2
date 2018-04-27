@@ -39,6 +39,7 @@ namespace Telegram.Bot.vasya_v2
             DefaultResponse listener;
             if (message.Text.ToLower().Contains("вася"))
             {   
+                Console.WriteLine($"Слушаю сообщение {message.Text} от {message.From.Id} в беседе {message.Chat.Id}.");
                 if (message.Text.ToLower().Contains("взлом") && message.Text.ToLower().Contains("пентагон"))
                 {
                     listener = new CrackPentagon(messageEventArgs);
@@ -48,6 +49,7 @@ namespace Telegram.Bot.vasya_v2
                  {
                     listener = new DeusVult(messageEventArgs);
                  }
+<<<<<<< HEAD
                 else
                  if (message.Text.ToLower().Contains("как") && message.Text.ToLower().Contains("настроение"))
                     {
@@ -57,6 +59,10 @@ namespace Telegram.Bot.vasya_v2
 
 
                     switch (message.Text.ToLower())
+=======
+                else  
+                switch (message.Text.ToLower())
+>>>>>>> 4d335f4aed44a9c22bca3f46ea4f86b5d8d6b8b5
                 {
                     default:
                         listener = new DefaultResponse(messageEventArgs);

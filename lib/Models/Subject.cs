@@ -4,9 +4,9 @@ using System.Text;
 
 namespace Telegram.Bot.vasya_v2
 {
-    public class Subject
+    public class TSubject
     {
-        public int Sbj_ID { get; set; }
-        public string Sbj_Name { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
     }
 }

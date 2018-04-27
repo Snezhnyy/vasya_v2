@@ -4,10 +4,10 @@ using System.Text;
 
 namespace Telegram.Bot.vasya_v2
 {
-    public class HomeTask
+    public class THomeTask
     {
-        public int HT_ID { get; set; }
-        public DateTime HT_Date { get; set; }
-        public string HT_Task { get; set; }
+        public int Id { get; set; }
+        public DateTime Date { get; set; }
+        public string Task { get; set; }
     }
 }
