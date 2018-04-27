@@ -49,8 +49,14 @@ namespace Telegram.Bot.vasya_v2
                     listener = new DeusVult(messageEventArgs);
                  }
                 else
-  
-                switch (message.Text.ToLower())
+                 if (message.Text.ToLower().Contains("как") && message.Text.ToLower().Contains("настроение"))
+                    {
+                    listener = new HappyBot(messageEventArgs);
+                }
+                else
+
+
+                    switch (message.Text.ToLower())
                 {
                     default:
                         listener = new DefaultResponse(messageEventArgs);
