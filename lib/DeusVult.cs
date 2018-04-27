@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.IO;
 using System.Linq;
 using System.Threading;
@@ -12,7 +12,7 @@ using System.Collections.Generic;
 
 namespace Telegram.Bot.vasya_v2
 {
-    class CrackPentagon : DefaultResponse
+    class DeusVult : DefaultResponse
     {
 
         public CrackPentagon(MessageEventArgs message) : base(message)
@@ -21,7 +21,7 @@ namespace Telegram.Bot.vasya_v2
 
         public override string Reply()
         {
-            return "Пентагон взломан!";
+            return "DEUS VULT!";
         }
     }
 }
