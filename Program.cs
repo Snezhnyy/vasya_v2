@@ -38,7 +38,7 @@ namespace Telegram.Bot.vasya_v2
             if (message == null || message.Type != MessageType.TextMessage) return;
             DefaultResponse listener;
             if (message.Text.ToLower().Contains("вася"))
-            {
+            {   
                 if (message.Text.ToLower().Contains("взлом") && message.Text.ToLower().Contains("пентагон"))
                 {
                     listener = new CrackPentagon(messageEventArgs);
