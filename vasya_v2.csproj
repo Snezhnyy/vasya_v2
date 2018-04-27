@@ -6,9 +6,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+<<<<<<< HEAD
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.Design" Version="1.1.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.2" />
+=======
+    <PackageReference Include="EntityFramework" Version="6.2.0" />
+>>>>>>> 3a8d8c8cb63acf0c90ad8b37f5b773644fd43491
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
     <PackageReference Include="NHibernate" Version="5.1.1" />
     <PackageReference Include="Telegram.Bot" Version="13.4.0" />
