@@ -105,12 +105,14 @@ namespace Telegram.Bot.vasya_v2
                         {
                             if (dbmes[dbmes.Count - 2].Text.Contains(sub.Name))
                                 if (!((message.Text.ToLower().Contains("что") || message.Text.ToLower().Contains("какое")) && (message.Text.ToLower().Contains("дом") || message.Text.ToLower().Contains("задан") || message.Text.ToLower().Contains("задав"))))
-                                {
-                                    Console.WriteLine("Yes, it is. I will remember it.");
-                                    db.HomeTasks.Add(new THomeTask { TelegramId = message.Chat.Id, Date = DateTime.Today, Subject = sub.Name, Task = message.Text});
-                                    db.SaveChanges();
-                                    return;
-                                }
+                                    if (!(message.Text.ToLower().Contains("спасибо") || message.Text.ToLower().Contains("спc")))
+                                        if ((message.Text.ToLower().Contains("упр") || message.Text.ToLower().Contains("задан") || message.Text.ToLower().Contains("задав") || message.Text.ToLower().Contains("номер")))
+                                        {
+                                            Console.WriteLine("Yes, it is. I will remember it.");
+                                            db.HomeTasks.Add(new THomeTask { TelegramId = message.Chat.Id, Date = DateTime.Today, Subject = sub.Name, Task = message.Text});
+                                            db.SaveChanges();
+                                            return;
+                                        }
                         }
                         Console.WriteLine("No, it isn't.");
                     }
